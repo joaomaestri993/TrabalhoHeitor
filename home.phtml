@@ -1,0 +1,32 @@
+<?php
+$page_back = "";
+$page_id = "home";
+
+$title = "";
+
+$banners = new Banner();
+
+$lista_banners = $banners->getListaBanner('A');
+
+#adiciona outros scripts especificos da pagina se necessario
+$str_add_css = array();
+$str_add_js = array('jquery.cycle.all');
+
+include_once("header.phtml");
+?>
+<div class="container-fluid">
+	<div class="container">
+		<?php if($lista_banners != false){ ?>
+			<ul class="banner_principal">
+				<?php foreach($lista_banners as $banner){ ?>
+					<li><img src="<?php echo UPLOADS_URL.'/banners/banner/'.$banner->url_banner; ?>"></li>
+				<?php } ?>
+			</ul>
+		<?php } ?>
+		<div class="clear" style="height: 170px;"></div>
+		<div><img src="<?php echo BASE_IMAGES_URL.'/descricao.png' ?>" class="img_responsiva"></div>
+	</div>
+</div>
+<?php
+include_once("footer.phtml");
+?>

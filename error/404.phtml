@@ -1,0 +1,19 @@
+<?php
+$page = "erro404";
+
+$title = "Página não encontrada | ";
+
+if(strpos($_SERVER["REQUEST_URI"], "sistema") !== false)
+  include_once "sistema/modulos/common/header.phtml";
+else
+  include_once "view/header.phtml";
+?>
+  <br />
+  <h1 class="error_404">404 - Página Não Encontrada</h1>
+  <br />
+<?php
+if(strpos($_SERVER["REQUEST_URI"], "sistema") !== false)
+  include_once "sistema/modulos/common/footer.phtml";
+else
+  include_once "view/footer.phtml";
+?>

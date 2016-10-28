@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+  <meta name="author" content="APK Tecnologia - Alex Cardozo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+  <title><?php echo $title.SITE_TITLE; ?></title>
+  <link href='<?php echo BASE_IMAGES_URL ?>/icon.png' rel='shortcut' type='image/x-icon' />
+  <link href='<?php echo BASE_IMAGES_URL ?>/icon.png' rel='icon' type='image/png' />
+  <link rel="stylesheet" type="text/css" href="<?php echo BASE_CSS_URL ?>/jquery/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo BASE_CSS_URL ?>/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo BASE_CSS_URL ?>/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo BASE_CSS_URL ?>/bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo BASE_CSS_URL ?>/style.css" />
+  <?php
+  #adiciona caso exista arquivos css especificos
+  if (isset($str_add_css) && count($str_add_css) > 0) {
+    foreach ($str_add_css as $new_file_css)
+      print('<link rel="stylesheet" type="text/css" href="' . BASE_CSS_URL . '/' . $new_file_css . '.css" />' . chr(13));
+  }
+  ?>
+  <script type="text/javascript" src="<?php echo BASE_JS_URL ?>/jquery.min.js"></script>
+  <script type="text/javascript" src="<?php echo BASE_JS_URL ?>/bootstrap.js"></script>
+  <script type="text/javascript" src="<?php echo BASE_JS_URL ?>/jquery-ui.js"></script>
+  <?php
+  #adiciona caso exista arquivos js especificos
+  if (isset($str_add_js) && count($str_add_js) > 0) {
+    foreach ($str_add_js as $new_file_js)
+      print('<script type="text/javascript" src="' . BASE_JS_URL . '/' . $new_file_js . '.js"></script>' . chr(13));
+  }
+  ?>
+  <script type="text/javascript">
+    var site_url = '<?php echo BASE_SITE_URL ?>';
+  </script>
+  <script type="text/javascript" src="<?php echo BASE_JS_URL ?>/index.js"></script>
+</head>
+<body id="<?php echo $page_back ?>">
+<div id="conteudo_back">
+<header>
+  <div class="container-fluid">
+    <div class=""><img src="<?php echo BASE_IMAGES_URL.'/header.png' ?>" class="img_responsiva"></div>
+  </div>
+  <div class="menu_header">
+    <div class="container-fluid">
+      <div class="container">
+        <ul class="menu_principal">
+          <li class="menu"><a href="#">Home</a></li>
+          <li class="menu">
+            <a>Ongs</a>
+            <ul class="sub_menu">
+              <li class="menu_sub"><a href="#">Requisitar Doação</a></li>
+              <li class="menu_sub"><a href="#">Doações</a></li>
+            </ul>
+          </li>
+          <li class="menu"><a href="#">Animais Perdidos</a></li>
+          <li class="menu"><a href="#">Adoção</a></li>
+          <li class="menu"><a href="#">Ajude</a></li>
+          <li class="menu"><a href="#">Associa-se</a></li>
+          <li class="menu"><a href="#">Meu Painel</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<div id="padding_main">
+<div class="container-fluid">
+<div class="container" id="<?php echo $page_id ?>">

@@ -1,0 +1,46 @@
+<?php
+$page_back = "";
+$page_id = "contato";
+
+$contato = new Contato(true);
+
+$title = "Fale Conosco | ";
+include_once("header.phtml");
+?>
+<h1>Fale Conosco</h1>
+
+<?php if(getRequest("msg") == "ok") { ?>
+  <p class="success">Contato enviado com sucesso! Aguarde nosso retorno.</p>
+<?php } elseif(getRequest("msg") == "erro") { ?>
+  <p class="error">Ocorreu um erro ao enviar seu contato! Por favor tente novamente.</p>
+<?php } ?>
+
+<form class="align_left" method="POST" onsubmit="return validaForm(this, true);">
+  <input type="hidden" name="acao" value="site_incluir" />  
+  <div>
+    <label for="assunto">Assunto</label>
+    <input type="text" name="assunto" id="assunto" value="" class="place" data-place="Assunto" />
+  </div>
+  <div>  
+    <label for="nome_">Nome</label>
+    <input type="text" name="nome" id="nome_" value="" class="place" data-place="Nome" />
+  </div>
+  <div>
+    <label for="email">E-mail</label>
+    <input type="text" name="email" id="email" value="" class="place" data-place="Email" />
+  </div>
+  <div>
+    <label for="telefone">Telefone</label>
+    <input type="text" name="telefone" id="telefone" value="" onkeydown="maskTelephone(this, false);" onkeyup="maskTelephone(this, false);" onblur="maskTelephone(this, true);" />
+  </div>
+  <div>
+    <label for="mensagem">Mensagem</label>
+    <textarea name="mensagem" id="mensagem"></textarea>
+  </div>
+  <div>
+    <input type="submit" name="enviar" id="enviar" value="Enviar" />
+  </div>
+</form>
+<?php
+  include_once("footer.phtml");
+?>

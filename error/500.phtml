@@ -1,0 +1,19 @@
+<?php
+$page = "erro500";
+
+$title = "Erro Interno | ";
+
+if(strpos($_SERVER["REQUEST_URI"], "sistema") !== false)
+	include_once "sistema/modulos/common/header.phtml";
+else
+	include_once "view/header.phtml";
+?>
+<br />
+<h1 class="error_404">500 - Erro interno de servidor</h1>
+<br />
+<?php
+if(strpos($_SERVER["REQUEST_URI"], "sistema") !== false)
+	include_once "sistema/modulos/common/footer.phtml";
+else
+	include_once "view/footer.phtml";
+?>

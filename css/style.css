@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.reset, .clear{ clear:both; }
+a img { border: 0; }
+input::-moz-placeholder{ opacity: 1; }
+input, textarea, select, a, a:hover, a:visited{
+  outline: none;
+  font-family: inherit;
+  text-decoration: none;
+  font-size: inherit;
+  color: inherit;
+}
+::-webkit-input-placeholder{ color: inherit; }
+ul, li{ list-style: none; }
+
+body, h1, h2, h3, h4{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+html, body { height: 100%; }
+body:before { content:""; height:100%; float:left; width:0; margin-top:-32767px; }
+#conteudo_back { height:auto !important; min-height:100%; }  /* engloba cabecalho e conteudo */
+#footer_container{ /* apenas rodape */
+  height: 38px;
+  margin-top: -38px;
+}
+#padding_main{  /* apenas conteudo */
+  padding-bottom: 38px;
+}
+
+.fLeft, .left{
+  float: left;
+}
+.fRight, .right{
+  float: right;
+}
+.centralize{
+  display: table;
+  margin: 0 auto;
+}
+.cPointer{
+  cursor: pointer;
+}
+.hidden{
+  display: none;
+}
+
+.align_left{ text-align: left; }
+.align_right{ text-align: right; }
+.align_center{ text-align: center; }
+
+.error, .success, .warning{
+  text-align: center;
+  padding: 10px 0;
+  margin: 15px 5px;
+  border: 1px solid;
+  font-weight: bold;
+  line-height: 18px;
+}
+.error{
+  font-size: 15px;
+  color: #CC0000;
+  background-color: #FFCFBF;
+}
+.success{
+  font-size: 15px;
+  color: #005500;
+  background-color: #BFFFCF;
+}
+.warning{
+  font-size: 14px;
+  color: #333333;
+  background-color: #FFFFBF;
+  opacity: 0.7;
+}
+.bloco {
+  display: table;
+  width: 100%;
+}
+.img_responsiva{
+  max-width: 100%;
+  height: auto;
+}
+/*Pagina em Construção*/
+.logo_empresa{margin-top: 20px;}
+.titulo_construcao{
+  font-size: 30px;
+  color: #f3721f;
+  font-weight: bold;
+}
+.sub_construcao{
+  color: #067cc2;
+  font-size: 20px;
+  font-weight: bold;
+}
+.img_construir{margin: 20px 0;}
+.campos_newsllter{
+  border-left: 1px solid #067cc2;
+  padding: 0 10px;
+  width: 50%;
+}
+.campos_contato{
+  padding: 0 10px;
+  width: 50%;
+}
+.titulo_bloco{
+  color: #067cc2;
+  font-weight: bold;
+  font-size: 20px;
+}
+.sub_bloco{
+  color: #f3721f;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.campo_news{
+  width: 90%;
+  height: 25px;
+  margin: 7px 0;
+  padding: 0 10px;
+}
+.btn_news{
+  float: right;
+  margin-right: 17px;
+  height: 30px;
+  border-radius: 5px;
+  background: #067cc2;
+  border: none;
+  padding: 0 5px;
+  color: #FFFFFF;
+  font-size: 15px;
+}
+.btn_news:hover{background: #f3721f;}
+.email_contato{
+  background: url("../images/back_email.png") no-repeat;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 0 6px 30px;
+}
+.roda_construcao{
+  margin: 30px auto 0;
+  display: table;
+}
+.menu_header{
+  width: 100%;
+  background: #A63636;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.menu_header .menu_principal{
+  margin: 0 auto;
+  display: table;
+  position: relative;
+}
+.menu_header .menu_principal .menu{
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid #FFFFFF;
+}
+.menu_header .menu_principal .menu:last-child{border-right: none;}
+.menu_header .menu_principal .menu a{
+  padding: 10px 10px;
+  display: block;
+}
+.menu_header .menu_principal .menu:hover{background: #8C0000;}
+.menu_header .menu_principal .menu .sub_menu{
+  background: #444444;
+  color: #FFFFFF;
+  position: absolute;
+  z-index: 5;
+}
+.menu_header .menu_principal .menu .sub_menu .menu_sub{
+  padding: 0 10px;
+  border-bottom: 1px solid #FFFFFF;
+  text-align: left;
+  display: none;
+}
+.menu_header .menu_principal .menu .sub_menu .menu_sub:hover{background: #000000;}
+.menu_header .menu_principal .menu:hover .sub_menu .menu_sub{display: block;}
+.back_footer{background: #A63636}
+.titulo{
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.texto_content{
+  color: #FFFFFF;
+  font-size: 14px;
+  text-align: justify;
+  width: 80%;
+  margin: 0 auto;
+}
